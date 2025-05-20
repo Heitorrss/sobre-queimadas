@@ -3,142 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conscientização sobre Queimadas</title>
+    <title>Desmatamento: Um Alerta Necessário</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        /* Estilos CSS */
+        :root {
+            --cor-fundo: #F8F8F8; /* Branco muito suave */
+            --cor-texto: #333333; /* Cinza escuro */
+            --cor-neutra-clara: #E0E0E0; /* Cinza claro */
+            --cor-neutra-media: #B0B0B0; /* Cinza médio */
+            --cor-destaque: #6A994E; /* Verde discreto para destaque */
+            --cor-link: #4A86E8; /* Azul suave para links */
+        }
+
         body {
-            font-family: sans-serif;
+            font-family: 'Open Sans', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.6;
         }
-        header {
-            background-color: #d32f2f; /* Vermelho escuro */
-            color: white;
+
+        .container {
+            max-width: 960px;
+            margin: 40px auto;
             padding: 20px;
-            text-align: center;
+            background-color: #FFFFFF; /* Fundo branco para o conteúdo */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
-        nav {
-            background-color: #424242; /* Cinza escuro */
-            color: white;
-            padding: 10px 0;
+
+        header {
             text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--cor-neutra-clara);
+            margin-bottom: 30px;
         }
-        nav a {
-            color: white;
+
+        header h1 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            color: var(--cor-destaque);
+            font-size: 2.8em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: var(--cor-neutra-media);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        nav ul li a {
             text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
+            color: var(--cor-texto);
+            font-weight: 600;
+            padding: 8px 15px;
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
-        nav a:hover {
-            background-color: #616161; /* Cinza um pouco mais claro */
+
+        nav ul li a:hover {
+            background-color: var(--cor-neutra-clara);
         }
-        .container {
-            max-width: 960px;
-            margin: 20px auto;
+
+        section {
+            margin-bottom: 40px;
             padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid var(--cor-neutra-clara);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            color: var(--cor-destaque);
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .image-gallery img {
+            max-width: 300px;
+            height: auto;
             border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
-        .section {
-            margin-bottom: 30px;
-            line-height: 1.6;
+
+        .image-gallery img:hover {
+            transform: scale(1.03);
         }
-        .section h2 {
-            color: #d32f2f;
-            border-bottom: 2px solid #d32f2f;
-            padding-bottom: 10px;
+
+        ul.list-points {
+            list-style: disc;
+            margin-left: 25px;
             margin-bottom: 15px;
         }
-        .important {
-            font-weight: bold;
-            color: #d32f2f;
+
+        ul.list-points li {
+            margin-bottom: 8px;
         }
+
+        a {
+            color: var(--cor-link);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #2F6FD3; /* Azul um pouco mais escuro no hover */
+            text-decoration: underline;
+        }
+
         footer {
-            background-color: #333;
-            color: white;
             text-align: center;
-            padding: 15px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding-top: 20px;
+            border-top: 1px solid var(--cor-neutra-clara);
+            margin-top: 30px;
+            color: var(--cor-neutra-media);
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Conscientização sobre Queimadas</h1>
-        <p>Proteja o nosso futuro. Previna incêndios.</p>
-    </header>
-
-    <nav>
-        <a href="#impacto">Impacto das Queimadas</a>
-        <a href="#prevencao">Como Prevenir</a>
-        <a href="#leis">Legislação</a>
-        <a href="#denunciar">Onde Denunciar</a>
-        <a href="#sobre">Sobre Nós</a>
-    </nav>
-
     <div class="container">
-        <section id="impacto" class="section">
-            <h2>O Impacto Devastador das Queimadas</h2>
-            <p>As queimadas representam uma grave ameaça ao meio ambiente, à saúde humana e à economia. Seus efeitos são sentidos em diversas escalas, desde a destruição imediata da flora e fauna até as mudanças climáticas globais.</p>
-            <ul>
-                <li><span class="important">Biodiversidade Perdida:</span> Incêndios florestais destroem habitats, levando à perda de inúmeras espécies de plantas e animais, muitas vezes de forma irreversível.</li>
-                <li><span class="important">Poluição do Ar:</span> A fumaça liberada pelas queimadas contém gases tóxicos e partículas finas que prejudicam a qualidade do ar, causando problemas respiratórios e cardiovasculares na população.</li>
-                <li><span class="important">Desmatamento e Degradação do Solo:</span> O fogo remove a cobertura vegetal protetora, expondo o solo à erosão pela chuva e pelo vento, além de reduzir sua fertilidade.</li>
-                <li><span class="important">Impacto na Saúde:</span> A exposição à fumaça das queimadas pode agravar condições de saúde preexistentes como asma e bronquite, além de aumentar o número de internações hospitalares.</li>
-                <li><span class="important">Efeitos Econômicos:</span> Queimadas podem destruir plantações, pastagens, áreas de produção e infraestrutura, causando prejuízos financeiros significativos.</li>
-                <li><span class="important">Contribuição para as Mudanças Climáticas:</span> A queima de biomassa libera grandes quantidades de dióxido de carbono (CO2), um dos principais gases de efeito estufa, intensificando o aquecimento global.</li>
+        <header>
+            <h1>Desmatamento: Um Alerta Necessário</h1>
+            <p>Compreenda os impactos e a importância da preservação das florestas.</p>
+            <nav>
+                <ul>
+                    <li><a href="#introducao">Introdução</a></li>
+                    <li><a href="#causas">Causas</a></li>
+                    <li><a href="#consequencias">Consequências</a></li>
+                    <li><a href="#solucoes">Soluções</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="introducao">
+            <h2>O Que é Desmatamento?</h2>
+            <p>O desmatamento, também conhecido como desflorestamento, refere-se à remoção em larga escala de florestas e matas para outros usos da terra, como agricultura, pecuária, expansão urbana e mineração. Este processo tem se acelerado drasticamente nas últimas décadas, impulsionado principalmente pela crescente demanda por recursos e espaço.</p>
+            <p>As florestas são ecossistemas vitais para a saúde do nosso planeta. Elas abrigam uma vasta biodiversidade, regulam o clima, produzem oxigênio e fornecem serviços ecossistêmicos essenciais, como a purificação da água e a estabilização do solo. A perda dessas áreas florestais tem impactos profundos e muitas vezes irreversíveis.</p>
+        </section>
+
+        <section id="causas">
+            <h2>Principais Causas do Desmatamento</h2>
+            <p>O desmatamento é um problema complexo com diversas causas interligadas. As principais são:</p>
+            <ul class="list-points">
+                <li><strong>Agropecuária:</strong> A expansão de pastagens para gado e plantações de commodities (como soja e palma) é a maior força motriz do desmatamento global.</li>
+                <li><strong>Exploração Madeireira Ilegal:</strong> A extração não regulamentada de madeira para fins comerciais, muitas vezes sem reposição ou manejo adequado.</li>
+                <li><strong>Mineração:</strong> A busca por minerais leva à remoção de grandes áreas florestais, além de contaminar rios e solos.</li>
+                <li><strong>Expansão Urbana e Infraestrutura:</strong> A construção de cidades, estradas, hidrelétricas e outras infraestruturas exige a derrubada de florestas.</li>
+                <li><strong>Queimadas:</strong> Embora muitas vezes iniciadas intencionalmente para limpeza de terreno, as queimadas podem sair do controle e devastar grandes extensões de florestas.</li>
             </ul>
         </section>
 
-        <section id="prevencao" class="section">
-            <h2>Como Podemos Prevenir Queimadas?</h2>
-            <p>A prevenção é a melhor forma de combater as queimadas. Pequenas ações no dia a dia podem fazer uma grande diferença:</p>
-            <ul>
-                <li>Não jogue bitucas de cigarro acesas em estradas ou áreas com vegetação seca.</li>
-                <li>Evite fazer fogueiras em locais inadequados ou em períodos de seca e vento forte.</li>
-                <li>Nunca utilize fogo para limpar terrenos. Existem alternativas mais seguras e eficazes.</li>
-                <li>Mantenha lotes e terrenos limpos, capinando o mato seco e removendo lixo e outros materiais inflamáveis.</li>
-                <li>Ao acampar, escolha locais seguros e prepare a fogueira longe de árvores e vegetação seca, cercando-a com pedras ou terra. Apague completamente antes de ir embora.</li>
-                <li>Conscientize vizinhos e amigos sobre os perigos das queimadas.</li>
-                <li>Em áreas rurais, construa aceiros (faixas limpas de vegetação) ao redor de plantações e áreas de preservação.</li>
-                <li>Tenha sempre por perto água e ferramentas como pás e baldes para controlar pequenos focos de incêndio.</li>
+        <section id="consequencias">
+            <h2>Consequências do Desmatamento</h2>
+            <p>Os impactos do desmatamento são vastos e afetam desde o nível local até o global:</p>
+            <ul class="list-points">
+                <li><strong>Perda de Biodiversidade:</strong> Milhares de espécies de plantas e animais perdem seus habitats, levando à extinção.</li>
+                <li><strong>Mudanças Climáticas:</strong> As árvores absorvem dióxido de carbono. Seu corte libera CO2 na atmosfera, contribuindo para o aquecimento global.</li>
+                <li><strong>Desertificação e Erosão do Solo:</strong> Sem a proteção da vegetação, o solo fica exposto, perdendo nutrientes e se tornando infértil.</li>
+                <li><strong>Alterações no Ciclo da Água:</strong> O desmatamento afeta os padrões de chuva, podendo levar a secas ou inundações.</li>
+                <li><strong>Impactos Sociais e Econômicos:</strong> Comunidades locais, muitas vezes dependentes da floresta para sua subsistência, são diretamente afetadas.</li>
             </ul>
+            <div class="image-gallery">
+                <img src="https://via.placeholder.com/300x200?text=Floresta+Saudável" alt="Floresta exuberante">
+                <img src="https://via.placeholder.com/300x200?text=Área+Desmatada" alt="Área desmatada">
+                <img src="https://via.placeholder.com/300x200?text=Impacto+Climático" alt="Globo terrestre com fumaça">
+            </div>
         </section>
 
-        <section id="leis" class="section">
-            <h2>Legislação sobre Queimadas</h2>
-            <p>No Brasil, as queimadas são regulamentadas por diversas leis e decretos, que visam proteger o meio ambiente e a saúde pública. Provocar incêndios florestais é crime e pode acarretar em multas e detenção.</p>
-            <p>É importante conhecer a legislação local e as regulamentações específicas de cada estado e município para evitar práticas ilegais e contribuir para a preservação ambiental.</p>
-            <p><small>Para informações mais detalhadas sobre a legislação, consulte órgãos ambientais e jurídicos.</small></p>
-        </section>
-
-        <section id="denunciar" class="section">
-            <h2>Onde Denunciar Queimadas?</h2>
-            <p>Se você presenciar um incêndio ou tiver informações sobre atividades que possam causar queimadas, é fundamental denunciar às autoridades competentes:</p>
-            <ul>
-                <li><span class="important">Corpo de Bombeiros:</span> Disque <span class="important">193</span> em caso de emergência.</li>
-                <li><span class="important">Polícia Militar Ambiental:</span> Entre em contato com a unidade mais próxima.</li>
-                <li><span class="important">IBAMA (Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis):</span> Utilize os canais de denúncia disponíveis no site oficial.</li>
-                <li><span class="important">Órgãos Ambientais Estaduais e Municipais:</span> Verifique os contatos e procedimentos de denúncia específicos da sua região.</li>
+        <section id="solucoes">
+            <h2>Como Combater o Desmatamento?</h2>
+            <p>Enfrentar o desmatamento exige um esforço conjunto de governos, empresas e indivíduos:</p>
+            <ul class="list-points">
+                <li><strong>Fiscalização e Legislação:</strong> Fortalecer leis ambientais e aumentar a fiscalização para coibir práticas ilegais.</li>
+                <li><strong>Incentivo à Agricultura Sustentável:</strong> Promover métodos agrícolas que não exijam a derrubada de novas florestas.</li>
+                <li><strong>Reflorestamento e Restauração:</strong> Plantar novas árvores e recuperar áreas degradadas.</li>
+                <li><strong>Consumo Consciente:</strong> Apoiar produtos de empresas que comprovadamente não contribuem para o desmatamento. Reduzir o consumo de carne pode ajudar.</li>
+                <li><strong>Educação Ambiental:</strong> Conscientizar a população sobre a importância das florestas e os impactos do desmatamento.</li>
+                <li><strong>Desenvolvimento de Energias Renováveis:</strong> Reduzir a dependência de combustíveis fósseis que levam à exploração de novas terras.</li>
             </ul>
-            <p>Sua denúncia pode salvar vidas e proteger o nosso planeta.</p>
+            <p>Cada um de nós tem um papel a desempenhar na proteção das nossas florestas. Pequenas ações diárias somam-se a um impacto significativo.</p>
         </section>
 
-        <section id="sobre" class="section">
-            <h2>Sobre este Site</h2>
-            <p>Este site tem como objetivo aumentar a conscientização sobre os perigos e as consequências das queimadas, além de fornecer informações sobre como preveni-las e onde denunciá-las. Acreditamos que a informação e a ação coletiva são essenciais para proteger o nosso meio ambiente e garantir um futuro mais seguro e saudável para todos.</p>
-            <p>Compartilhe este site com seus amigos e familiares. Juntos, podemos fazer a diferença!</p>
+        <section id="contato">
+            <h2>Saiba Mais e Participe</h2>
+            <p>Para mais informações sobre o desmatamento e como você pode contribuir, visite os sites de organizações como:</p>
+            <ul class="list-points">
+                <li><a href="https://www.wwf.org.br/" target="_blank">WWF Brasil</a></li>
+                <li><a href="https://www.greenpeace.org/brasil/" target="_blank">Greenpeace Brasil</a></li>
+                <li><a href="https://www.ipam.org.br/" target="_blank">IPAM (Instituto de Pesquisa Ambiental da Amazônia)</a></li>
+            </ul>
+            <p>Juntos, podemos fazer a diferença na luta contra o desmatamento e na proteção do nosso futuro.</p>
         </section>
+
+        <footer>
+            <p>&copy; 2024 Site Informativo sobre Desmatamento. Todos os direitos reservados.</p>
+        </footer>
     </div>
-
-    <footer>
-        <p>&copy; 2025 Conscientização sobre Queimadas - Todos os direitos reservados.</p>
-    </footer>
 </body>
 </html>
